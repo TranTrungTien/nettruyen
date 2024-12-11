@@ -49,8 +49,8 @@ export default function FeaturedTitles() {
             }}
             spaceBetween={20}
             loop
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
+            // onSlideChange={() => console.log("slide change")}
+            // onSwiper={(swiper) => console.log(swiper)}
           >
             {featuredTitles.map((manga) => {
               const title = Utils.Mangadex.getMangaTitle(manga);
