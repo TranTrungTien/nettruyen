@@ -126,11 +126,11 @@ export const createHttpsRequestPromise = async function <T>(
     );
   }
 
-  console.info("Request to API Mangadex: ", path);
+  // console.info("Request to API Mangadex: ", path);
 
-  const encodedUrl = btoa(`${MANGADEX_API_URL}${path}`)
-    .replace(/\+/g, "-")
-    .replace(/\//g, "_");
+  // const encodedUrl = btoa(`${MANGADEX_API_URL}${path}`)
+  //   .replace(/\+/g, "-")
+  //   .replace(/\//g, "_");
   const headers = new Headers();
   headers.set("x-requested-with", "cubari");
   const httpsRequestOptions: RequestInit = {
@@ -144,7 +144,7 @@ export const createHttpsRequestPromise = async function <T>(
   }
 
   const data = await fetch(
-    `${CORS}/v1/cors/${encodedUrl}`,
+    `${MANGADEX_API_URL}${path}`,
     httpsRequestOptions,
   ).then((res) => res.json());
 
