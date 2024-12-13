@@ -126,8 +126,6 @@ export const createHttpsRequestPromise = async function <T>(
     );
   }
 
-  console.info("Request to API Mangadex: ", path);
-
   const encodedUrl = btoa(`${MANGADEX_API_URL}${path}`)
     .replace(/\+/g, "-")
     .replace(/\//g, "_");
@@ -143,11 +141,9 @@ export const createHttpsRequestPromise = async function <T>(
     Object.assign(httpsRequestOptions, options);
   }
 
-  const data = await fetch(
-    `/api/source/${path}`,
-    httpsRequestOptions,
-  ).then((res) => res.json());
-
+  const data = await fetch(`/api${path}`, httpsRequestOptions).then((res) =>
+    res.json(),
+  );
   return { data };
 };
 
