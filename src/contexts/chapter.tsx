@@ -103,7 +103,7 @@ export const ChapterContextProvider = ({
 
   useEffect(() => {
     if (!chapter) return;
-    const newPath = Constants.Routes.nettrom.chapter(chapter.id);
+    const newPath = Constants.Routes.nettruyen.chapter(chapter.id);
     document.title = `Đọc ${Utils.Mangadex.getChapterTitle(chapter)}`;
     window.history.pushState(
       { ...window.history.state, as: newPath, url: newPath },

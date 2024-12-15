@@ -126,7 +126,7 @@ export const useAuth = ({
       window.location.pathname === Constants.Routes.verifyEmail &&
       user?.email_verified_at
     )
-      router.push(redirectIfAuthenticated || Constants.Routes.nettrom.index);
+      router.push(redirectIfAuthenticated || Constants.Routes.nettruyen.index);
 
     if (window.location.pathname === Constants.Routes.verifyEmail && !user) {
       router.push("/");

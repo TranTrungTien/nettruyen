@@ -17,9 +17,9 @@ export default function TopNav() {
         {/* Logo container*/}
         <Link className="logo pl-0" href={"/"}>
           <img
-            src={"/images/logo.png"}
+            src={"/images/logo-nettruyen.png"}
             className="hidden h-6 dark:inline-block"
-            alt="truyendex logo"
+            alt="nettruyen logo"
             height={24}
           />
         </Link>
@@ -50,7 +50,7 @@ export default function TopNav() {
           </li>
           <li className="mb-0 inline pl-1">
             <a
-              href="https://github.com/zennomi/truyendex"
+              href="https://github.com/zennomi/nettruyen"
               target="_blank"
               className="btn btn-icon rounded-full border-indigo-600 bg-indigo-600 text-white hover:border-indigo-700 hover:bg-indigo-700"
             >
@@ -66,7 +66,7 @@ export default function TopNav() {
           >
             <li>
               <Link
-                href={Constants.Routes.nettrom.index}
+                href={Constants.Routes.nettruyen.index}
                 className="sub-menu-item"
               >
                 Bản thử nghiệm
@@ -80,12 +80,12 @@ export default function TopNav() {
                   <a href="#"> Chủ đề</a>
                   <span className="submenu-arrow" />
                   <ul className="submenu scrollbar max-h-[80vh] overflow-scroll">
-                    {Constants.Nettrom.tags
+                    {Constants.Nettruyen.tags
                       .filter((tag) => tag.attributes.group === "theme")
                       .map((tag) => (
                         <li key={tag.id}>
                           <Link
-                            href={Utils.Url.getSearchNetTromUrl({
+                            href={Utils.Url.getSearchNettruyenUrl({
                               includedTags: [tag.id],
                             })}
                             className="sub-menu-item"
@@ -102,12 +102,12 @@ export default function TopNav() {
                   <a href="#"> Thể loại</a>
                   <span className="submenu-arrow" />
                   <ul className="submenu scrollbar max-h-[80vh] overflow-scroll">
-                    {Constants.Nettrom.tags
+                    {Constants.Nettruyen.tags
                       .filter((tag) => tag.attributes.group === "genre")
                       .map((tag) => (
                         <li key={tag.id}>
                           <Link
-                            href={Utils.Url.getSearchNetTromUrl({
+                            href={Utils.Url.getSearchNettruyenUrl({
                               includedTags: [tag.id],
                             })}
                             className="sub-menu-item"
@@ -129,7 +129,7 @@ export default function TopNav() {
                     ).map((demographic) => (
                       <li key={demographic}>
                         <Link
-                          href={Utils.Url.getSearchNetTromUrl({
+                          href={Utils.Url.getSearchNettruyenUrl({
                             publicationDemographic: [demographic],
                           })}
                           className="sub-menu-item"
@@ -145,12 +145,12 @@ export default function TopNav() {
                   <a href="#"> Hình thức</a>
                   <span className="submenu-arrow" />
                   <ul className="submenu">
-                    {Constants.Nettrom.tags
+                    {Constants.Nettruyen.tags
                       .filter((tag) => tag.attributes.group === "format")
                       .map((tag) => (
                         <li key={tag.id}>
                           <Link
-                            href={Utils.Url.getSearchNetTromUrl({
+                            href={Utils.Url.getSearchNettruyenUrl({
                               includedTags: [tag.id],
                             })}
                             className="sub-menu-item"
