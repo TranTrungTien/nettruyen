@@ -22,7 +22,7 @@ export default function LastUpdatedTitles({
 
           <div className="hidden md:col-span-6 md:block md:text-end lg:col-span-4">
             <Link
-              href={Constants.Routes.nettrom.index}
+              href={Constants.Routes.nettruyen.index}
               className="relative inline-block border-none text-center align-middle text-base font-semibold tracking-wide text-slate-400 duration-500 ease-in-out after:absolute after:bottom-0 after:end-0 after:start-0 after:h-px after:w-0 after:bg-indigo-600 after:duration-500 after:content-[''] hover:text-indigo-600 hover:after:end-auto hover:after:w-full"
             >
               Xem thêm <Iconify icon="uil:arrow-right" className="inline" />
@@ -42,7 +42,7 @@ export default function LastUpdatedTitles({
 
                   <div className="absolute -bottom-20 end-3 start-3 duration-500 group-hover:bottom-3">
                     <Link
-                      href={Constants.Routes.nettrom.manga(extended.id)}
+                      href={Constants.Routes.nettruyen.manga(extended.id)}
                       className="inline-block w-full rounded-md border border-slate-900 bg-slate-900 px-5 py-2 text-center align-middle text-base font-semibold tracking-wide text-white duration-500"
                     >
                       Đọc
@@ -62,7 +62,7 @@ export default function LastUpdatedTitles({
 
                 <div className="mt-4">
                   <Link
-                    href={Constants.Routes.nettrom.manga(extended.id)}
+                    href={Constants.Routes.nettruyen.manga(extended.id)}
                     className="text-sm font-semibold hover:text-indigo-600 md:text-lg"
                   >
                     {title}

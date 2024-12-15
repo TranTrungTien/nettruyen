@@ -73,7 +73,7 @@ jobs:
             yarn install
 
             # Restart app (use pm2 or a similar process manager)
-            pm2 delete truyendex || true
-            pm2 start "yarn start -p ${{ secrets.PORT }}" --name truyendex
+            pm2 delete nettruyen || true
+            pm2 start "yarn start -p ${{ secrets.PORT }}" --name nettruyen
             pm2 save
           EOF

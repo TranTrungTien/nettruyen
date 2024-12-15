@@ -4,7 +4,7 @@ import { useCallback } from "react";
 
 export default function useReadingHistory() {
   const [history, setHistory] = useLocalStorage<Record<string, ReadingHistory>>(
-    "truyendex-history",
+    "nettruyen-history",
     {},
   );
 

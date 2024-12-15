@@ -135,7 +135,7 @@ export default function SignUpForm() {
             >
               Đồng ý với{" "}
               <a href="#" className="text-indigo-600">
-                điều khoản của TruyenDex
+                điều khoản của nettruyen
               </a>
             </label>
           </div>
