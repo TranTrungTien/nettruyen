@@ -20,7 +20,7 @@ export async function generateMetadata(
     // fetch data
     const {
       data: { data: manga },
-    } = await MangadexApi.Manga.getMangaId(id);
+    } = await MangadexApi.Manga.getMangaId(id, undefined, true);
     return {
       title: `${Utils.Mangadex.getMangaTitle(manga)} - Đọc ngay tại ${Constants.APP_NAME}`,
       description: Utils.Mangadex.transLocalizedStr(

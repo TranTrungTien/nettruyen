@@ -369,6 +369,7 @@ export const getMangaIdAggregate = function (
 export const getMangaId = function (
   id: string,
   options?: GetMangaIdRequestOptions,
+  isServer? :boolean
 ) {
   if (id === undefined) {
     return Promise.reject(
@@ -380,8 +381,7 @@ export const getMangaId = function (
 
   const qs = util.buildQueryStringFromOptions(options);
   const path = `/manga/${id}${qs}`;
-
-  return util.createHttpsRequestPromise<GetMangaIdResponse>("GET", path);
+  return util.createHttpsRequestPromise<GetMangaIdResponse>("GET", path, undefined, isServer);
 };
 
 // Kenjugs (06/06/2022) TODO: Implement functionality for `PUT /manga/{id}`

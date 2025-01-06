@@ -6139,7 +6139,7 @@ p {
 
 .reading .reading-detail .page-chapter {
   position: relative;
-  background: url("/images/loading.jpg") center center no-repeat;
+  background: url("/images/loading.png") center center no-repeat;
   text-align: center;
 }
 
