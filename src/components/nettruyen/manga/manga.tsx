@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { toast } from "react-toastify";
 import Link from "next/link";
@@ -86,7 +86,7 @@ export default function Manga({ mangaId }: { mangaId: string }) {
         ].map((item, index, arr) => {
           const isLast = index === arr.length - 1;
           return (
-            <>
+            <Fragment key={index}>
               <li
                 key={index}
                 itemProp="itemListElement"
@@ -105,7 +105,7 @@ export default function Manga({ mangaId }: { mangaId: string }) {
                   /
                 </li>
               )}
-            </>
+            </Fragment>
           );
         })}
         {/* <li itemProp="itemListElement" itemType="http://schema.org/ListItem">
@@ -219,9 +219,8 @@ export default function Manga({ mangaId }: { mangaId: string }) {
                   </p>
                   <p className="pl-10 lg:pl-0">
                     {manga?.attributes.tags.map((tag, idx) => (
-                      <>
+                      <Fragment key={tag.id}>
                         <Link
-                          key={tag.id}
                           href={`${Constants.Routes.nettruyen.search}?includedTags=${tag.id}`}
                           className="text-web-title transition hover:text-web-titleLighter"
                         >
@@ -235,7 +234,7 @@ export default function Manga({ mangaId }: { mangaId: string }) {
                             ,{" "}
                           </span>
                         )}
-                      </>
+                      </Fragment>
                     ))}
                   </p>
                 </li>

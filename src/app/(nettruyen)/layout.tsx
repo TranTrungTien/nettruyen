@@ -12,18 +12,28 @@ import NextTopLoader from "nextjs-toploader";
 
 export const metadata: Metadata = {
   title: `${Constants.APP_NAME} - Truyện tranh chất lượng cao không quảng cáo`,
-  description: `Đọc truyện miễn phí, chất lượng cao và tham gia ủng hộ nhóm dịch trên ${Constants.APP_NAME}`,
+  description: ` ${Constants.APP_NAME} – web đọc truyện tranh online miễn phí lớn nhất, cập nhật nhanh chóng các truyện tranh hot, truyện tranh hay nhất. Đọc truyện tranh full online và 
+                thảo luận với hơn 10 triệu thành viên tại ${Constants.APP_NAME}!`,
   applicationName: Constants.APP_NAME,
-  authors: [{ name: "nettruyen", url: "https://github.com/zennomi/nettruyen" }],
-  keywords: [
+  authors: [{ name: "Truyện tranh NetTruyen", url: "https://nettruyen-lac.vercel.app/" }],
+  keywords:[
+    "nettruyen",
     "truyện tranh",
-    "manga",
-    "manhwa",
-    "manhua",
-    "nettruyen",
-    "blogtruyen",
-    "nettruyen",
+    "đọc truyện tranh",
+    "truyện tranh online",
+    "nettruyen tv",
+    "truyện tranh full",
+    "truyện tranh hay nhất",
+    "truyện tranh nettruyen",
+    "đọc truyện tranh online",
+    "nettruyen vn",
+    "nettruyen mới",
+    "nettruyen tổng tài",
+    "truyện nettruyen",
+    "web đọc truyện tranh",
+    "đọc truyện tranh nettruyen"
   ],
+  robots: "follow, index",
   metadataBase: new URL(Constants.APP_URL),
   other: {
     referrer: "same-origin",

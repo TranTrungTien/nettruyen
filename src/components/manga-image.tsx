@@ -28,7 +28,7 @@ export default function MangaImage({
       <LazyLoadImage
         wrapperClassName="wrapper"
         effect={disabledEffect ? undefined : effect}
-        placeholderSrc={"/images/loading.jpg"}
+        placeholderSrc={"/images/loading.png"}
         className="h-full w-full object-cover"
         afterLoad={() => setLoaded(true)}
         threshold={threshold}

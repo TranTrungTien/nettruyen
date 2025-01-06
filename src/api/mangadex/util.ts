@@ -107,6 +107,7 @@ export const createHttpsRequestPromise = async function <T>(
   method: string,
   path: string,
   options?: AxiosRequestConfig,
+  isServer?: boolean
 ): Promise<{ data: T }> {
   if (method === undefined) {
     throw new Error(
@@ -126,13 +127,10 @@ export const createHttpsRequestPromise = async function <T>(
     );
   }
 
-  const encodedUrl = btoa(`${MANGADEX_API_URL}${path}`)
-    .replace(/\+/g, "-")
-    .replace(/\//g, "_");
   const headers = new Headers();
   headers.set("x-requested-with", "cubari");
   const httpsRequestOptions: RequestInit = {
-    method: method,
+    method,
     headers,
   };
 
@@ -141,7 +139,12 @@ export const createHttpsRequestPromise = async function <T>(
     Object.assign(httpsRequestOptions, options);
   }
 
-  const data = await fetch(`/api${path}`, httpsRequestOptions).then((res) =>
+  let fullUrl = `/api${path}`;
+  if(isServer) {
+    fullUrl = Constants.APP_URL +  fullUrl;
+  }
+
+  const data = await fetch(fullUrl, httpsRequestOptions).then((res) =>
     res.json(),
   );
   return { data };
